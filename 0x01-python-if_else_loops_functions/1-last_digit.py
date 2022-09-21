@@ -12,4 +12,4 @@ elif result == 0:
     print(f'Last digit of {number:d} is {result:d} and is 0')
 elif result < 6 and result != 0:
     print(f'Last digit of {number:d} is '
-    + f'{result:d} and is less than 6 and not 0')
+         + f'{result:d} and is less than 6 and not 0')
