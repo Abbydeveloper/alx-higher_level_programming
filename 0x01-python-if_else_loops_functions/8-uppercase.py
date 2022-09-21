@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
 def uppercase(str):
-    if ord(str) >= 65 and ord(str) <= 90:
-        return True
-    else:
-        return False
+    for element in str:
+        if ord(element) >= ord('a') and ord(element) <= ord('z'):
+            char = chr(ord(element) - 32)
+        else:
+            char = element
+        print('{:s}'.format(char), end='')
+    print('')
