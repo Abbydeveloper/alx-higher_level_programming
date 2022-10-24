@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+
+"""Module 1-my_list
+Create a class to inherit from the list class
+"""
+
+class MyList(list):
+
+    def print_sorted(self):
+        new_list = self[:]
+        new_list.sort()
+        print("{}".format(new_list))
