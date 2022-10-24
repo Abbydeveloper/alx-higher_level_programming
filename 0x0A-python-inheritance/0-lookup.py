@@ -9,5 +9,5 @@ def lookup(obj):
     Args:
         - obj: oject to get list of available attributes and methods from 
     """
-    return dir(obj)
+    return (dir(obj))
 
