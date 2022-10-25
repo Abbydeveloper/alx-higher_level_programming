@@ -2,6 +2,7 @@
 
 """Module 5 - Base geometry"""
 
+
 class BaseGeometry:
     """Just a completely empty class"""
 
