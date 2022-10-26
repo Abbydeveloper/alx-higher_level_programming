@@ -1,4 +1,11 @@
 #!/usr/bin/python3
 """Module 5 - Save to JSON file"""
 
-import json 
+
+import json
+
+def save_to_json_file(my_obj, filename):
+    """Save to json file"""
+
+    with open(filename, 'w+') as f:
+        json.dump(my_obj, f)
