@@ -6,5 +6,5 @@ def read_file(filename=''):
     """Read content of fileneme and print to stdout"""
 
     with open(filename) as f:
-        read_file = f.read()
-        print(read_text, end='')
+        read_text_file = f.read()
+        print(read_text_file, end='')
