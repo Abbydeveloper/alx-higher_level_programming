@@ -23,4 +23,3 @@ class Square(Rectangle):
         """Calculate the area of the instance of a square"""
 
         return self.__size ** 2
-
