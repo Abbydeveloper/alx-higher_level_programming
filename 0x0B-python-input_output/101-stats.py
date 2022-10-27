@@ -13,9 +13,10 @@ size = 0
 
 def print_stats(size, stat):
     """Print statistics"""
-    print("File size: {}".format(size))                                        
+    print("File size: {}".format(size))
     for key in sorted(stat):
         print("{}: {}".format(key, stat[key]))
+
 
 try:
     for line in sys.stdin:
@@ -25,14 +26,12 @@ try:
         else:
             count += 1
 
-
             line = line.split()
 
-            try: 
+            try:
                 size += int(line[-1])
             except(IndexError, ValueError):
                 pass
-
 
             try:
                 if line[-2] in status_codes:
