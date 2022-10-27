@@ -26,23 +26,23 @@ try:
         else:
             count += 1
 
-            line = line.split()
+        line = line.split()
 
-            try:
-                size += int(line[-1])
-            except(IndexError, ValueError):
-                pass
+        try:
+            size += int(line[-1])
+        except(IndexError, ValueError):
+            pass
 
-            try:
-                if line[-2] in status_codes:
-                    if stat.get(line[-2], -1) == -1:
-                        stat[line[-2]] = 1
-                    else:
-                        stat[line[-2]] += 1
-            except IndexError:
-                pass
+        try:
+            if line[-2] in status_codes:
+                if stat.get(line[-2], -1) == -1:
+                    stat[line[-2]] = 1
+                else:
+                    stat[line[-2]] += 1
+        except IndexError:
+            pass
 
-        print_stats(size, stat)
+    print_stats(size, stat)
 
 except KeyboardInterrupt:
     print_stats(size, stat)
