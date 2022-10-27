@@ -16,7 +16,7 @@ def pascal_triangle(n):
         for j in range(1, i + 1):
             if j < len(pascal_list[i - 1]):
                 pascal_list[i][j] = pascal_list[i - 1][j - 1] +\
-                pascal_list[i - 1][j]
+                    pascal_list[i - 1][j]
             else:
                 pascal_list[i][j] = pascal_list[i - 1][0]
     return pascal_list
