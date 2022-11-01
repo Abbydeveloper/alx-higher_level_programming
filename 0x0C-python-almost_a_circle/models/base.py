@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base class for all other classes in this project.
-It manages ghe id atribute in all future classes and avoids duplication of the same code (by extension, same bugs)"""
+It manages ghe id atribute in all future classes and avoids
+duplication of the same code (by extension, same bugs)"""
 
 
 class Base:
@@ -12,7 +13,7 @@ class Base:
         """class constructor"""
 
         if id is not None:
-           self.id = id
+            self.id = id
         else:
             __nb_objects += 1
             self.id = Base.__nb_objects
