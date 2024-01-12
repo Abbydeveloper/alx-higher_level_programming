@@ -17,4 +17,3 @@ if __name__ == "__main__":
     for n in range(1, length + 1):
         if (length > 0):
             print("{}: {}".format(n, sys.argv[n]))
-
