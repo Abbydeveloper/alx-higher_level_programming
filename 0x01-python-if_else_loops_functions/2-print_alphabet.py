@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
 for ch in range(97, 123):
-    print(f"{chr(ch):s}", end="")
+    print('{}'.format(chr(ch)), end="")
