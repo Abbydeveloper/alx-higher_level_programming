@@ -5,7 +5,7 @@ def magic_calculation(a, b):
     if (a < b):
         c = add(a, b)
 
-        for a in range(0, 90):
+        for i in range(4, 6):
             c += i
 
         return c
