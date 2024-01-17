@@ -6,11 +6,9 @@ def new_in_list(my_list, idx, element):
     length = len(my_list)
     if idx > length:
         return my_list
-    new_list = []
-    for n in range(0, length + 1):
-        if n == idx:
-            new_list[n] = element
-        else:
-            new_list[n] = my_list[n]
+    new_list = my_list.copy()
+    if new_list[idx]:
+            new_list[idx] = element
+
 
     return new_list
