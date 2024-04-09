@@ -2,10 +2,10 @@
 
 const a = process.argv[2];
 
-if (isNaN(a) || a == undefined) {
-  console.log('Missing number of occurrences');
+if (isNaN(a) || a === undefined) {
+  console.log('Missing size');
 } else {
   for (let i = 0; i < a; i++) {
-    console.log('C is fun');
+    console.log('X'.repeat(a));
   }
 }
