@@ -17,7 +17,7 @@ console.log(r3.width);
 console.log(r3.height);
 
 
-console r4 = new Rectangle(2, 0);
+const r4 = new Rectangle(2, 0);
 console.log(r4);
 console.log(r4.width);
 console.log(r4.height);
