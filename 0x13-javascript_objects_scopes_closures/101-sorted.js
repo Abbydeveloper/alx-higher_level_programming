@@ -8,7 +8,7 @@ for (const [key, value] of Object.entries(data)) {
   if (!newDict[value]) {
     newDict[value] = [];
   }
-    newDict[value].push(key);
+  newDict[value].push(key);
 }
 
 console.log(newDict);
