@@ -3,7 +3,7 @@
 let argCount = 0;
 
 exports.logMe = function (item) {
-  console.log(`${argCount} : ${item}`);
+  console.log(`${argCount}: ${item}`);
 
   argCount++;
 };
