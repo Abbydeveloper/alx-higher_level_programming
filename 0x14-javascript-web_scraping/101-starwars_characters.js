@@ -9,15 +9,14 @@ req(url, function (error, response, body) {
   } else {
     const characters = JSON.parse(body).characters;
 
-    console.log(characters);
-    characters.forEach(function (character, index, arr) {
-      req(arr[index], function (err, response, body) {
+    for (let i = 0; i < characters.length; i++) {
+      req(characters[i], function (err, response, body) {
         if (err) {
           console.log(err);
         } else {
           console.log(JSON.parse(body).name);
         }
       });
-    });
+    };
   }
 });
