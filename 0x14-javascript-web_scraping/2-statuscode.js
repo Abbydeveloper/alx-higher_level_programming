@@ -2,7 +2,7 @@
 const req = require('request');
 const file = process.argv[2];
 
-req(file, function(error, response) {
+req(file, function (error, response) {
   if (error) {
     console.log(error);
   } else {
