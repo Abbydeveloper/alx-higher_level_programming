@@ -10,7 +10,7 @@ req(url, function (error, response, body) {
     const characters = JSON.parse(body).characters;
 
     characters.forEach(function (character) {
-      req(character, function(err, response, body) {
+      req(character, function (err, response, body) {
         if (err) {
           console.log(err);
         } else {
