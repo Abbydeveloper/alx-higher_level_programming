@@ -12,7 +12,7 @@ req(url, function (error, response, body) {
   }
 });
 
-function printCharactersInOrder(characters, index) {
+function printCharactersInOrder (characters, index) {
   req(characters[index], function (err, response, body) {
     if (err) {
       console.log(err);
@@ -22,5 +22,5 @@ function printCharactersInOrder(characters, index) {
         printCharactersInOrder(characters, index + 1);
       }
     }
-  });     
+  });
 }
