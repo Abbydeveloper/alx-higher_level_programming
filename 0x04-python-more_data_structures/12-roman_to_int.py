@@ -13,7 +13,7 @@ def roman_to_int(roman_string):
     for char in roman_string: 
 
         if (prev_num  < roman_dict[char] and prev_num != 0):
-            num = (roman_dict[char] - prev_num)
+            num += (roman_dict[char] - (2 * prev_num))
         else:
             num += roman_dict[char]
 
