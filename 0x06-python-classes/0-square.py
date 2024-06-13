@@ -2,5 +2,6 @@
 
 """ Class Square """
 
+
 class Square:
     '''Class defines a square'''
