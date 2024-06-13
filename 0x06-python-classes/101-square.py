@@ -68,14 +68,13 @@ class Square:
     def __str__(self):
         """Print a Square instance"""
         if self.__size != 0:
-            print("")
             for a in range(self.__position[1]):
                 print("")
-            for x in range(self.__size):
-                for b in range(self.__position[0]):
-                    print(" ", end="")
-                for y in range(self.__size):
-                    print('#', end="")
-                if x != self.__size - 1:
-                    print("")
+        for x in range(self.__size):
+            for b in range(self.__position[0]):
+                print(" ", end="")
+            for y in range(self.__size):
+                print('#', end="")
+            if x != self.__size - 1:
+                print("")
         return ("")
