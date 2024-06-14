@@ -1,0 +1,56 @@
+===============
+0-add_integer.py
+===============
+
+Define a function to add integers
+```add_integer(a, b=98)```
+
+
+Usage
+=====
+
+```ad_integer(a, b=98)``` returns the addition of two numbers
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(2, 3)
+	5
+
+::
+
+	>>> add_integer(2, -3)
+	-1
+
+The function also adds floating point numbers
+
+::
+
+	>>> add_integer(2.0, 3.0)
+	5
+
+N.B Floating numbers are casted to integers before being added
+
+::
+
+	>>> add_integer(2.9, 0.2)
+	2
+
+::
+
+	>>> add_integer(-2.9, -0.2)
+	-2
+
+Integers and Floating numbers can be added together
+
+::
+
+	>>> add_integers(20.4, 4)
+	24
+
+The second argument has a default value, and so is optional
+
+::
+	>>> add_integers(5)
+	103
+
