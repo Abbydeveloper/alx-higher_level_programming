@@ -51,6 +51,5 @@ Integers and Floating numbers can be added together
 The second argument has a default value, and so is optional
 
 ::
-	>>> add_integers(5)
+	>>> add_integer(5)
 	103
-
