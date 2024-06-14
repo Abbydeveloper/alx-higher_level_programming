@@ -45,7 +45,7 @@ Integers and Floating numbers can be added together
 
 ::
 
-	>>> add_integers(20.4, 4)
+	>>> add_integer(20.4, 4)
 	24
 
 The second argument has a default value, and so is optional
