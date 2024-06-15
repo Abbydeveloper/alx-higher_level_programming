@@ -19,7 +19,7 @@ Uses
 	...	[12, 15, 18]
 	... ]
 	>>> print(matrix_divided(matrix, 3))
-	[[1.0, 2.0, 3,0], [4.0, 5.0, 6.0]]
+	[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
 
 N.B the elements in the returned matrix are rounded to 2 decimal places maximum
 
@@ -159,16 +159,16 @@ The divisor must be an integer or float (but not 0). Else, raise a TypeError
 	...	[2, 1, 4],
 	...	[3, 1, 5]
 	... ]
-	>>> print(matrix_divided(matrix, None)
+	>>> print(matrix_divided(matrix, None))
 	Traceback (most recent call last):
 	TypeError: div must be a number
 
 ::
 
 	>>> matrix = [
-	...	[1, 5, 2]
+	...	[1, 5, 2],
 	...	[4, 2, 6]
 	... ]
 	>>> print(matrix_divided(matrix, 'string'))
-	Traceback (most recent calal last):
+	Traceback (most recent call last):
 	TypeError: div must be a number
