@@ -17,7 +17,7 @@ Uses
 	>>> first_name = 'Bob'
 	>>> last_name = 'Lenon'
 	>>> say_my_name(first_name, last_name)
-	>>> My name is Bob Lenon
+	My name is Bob Lenon
 
 
 If no last_name is provided, the default last_name is used
@@ -28,7 +28,7 @@ If no last_name is provided, the default last_name is used
 
 	>>> first_name = 'Bob'
 	>>> say_my_name(first_name)
-	>>> My name is Bob
+	My name is Bob
 
 If last_name is not a string, raise TypeError
 
@@ -39,8 +39,8 @@ If last_name is not a string, raise TypeError
 	>>> first_name = 'Bob'
 	>>> last_name = 12
 	>>> say_my_name(first_name, last_name)
-	>>> Traceback (most recent call last):
-	>>> TypeError: last_name must be a string
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
 
 
 If first_name is not a string raise TypeError
@@ -52,5 +52,5 @@ If first_name is not a string raise TypeError
 	>>> first_name = 12
 	>>> last_name = 'Lenon'
 	>>> say_my_name(first_name, last_name)
-	>>> Traceback (most recent call last):
-	>>> TypeError: first_name must be a string
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
