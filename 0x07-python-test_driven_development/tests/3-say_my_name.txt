@@ -28,7 +28,7 @@ If no last_name is provided, the default last_name is used
 
 	>>> first_name = 'Bob'
 	>>> say_my_name(first_name)
-	My name is Bob
+	My name is Bob 
 
 If last_name is not a string, raise TypeError
 
