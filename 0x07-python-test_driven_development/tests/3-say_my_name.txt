@@ -54,3 +54,13 @@ If first_name is not a string raise TypeError
 	>>> say_my_name(first_name, last_name)
 	Traceback (most recent call last):
 	TypeError: first_name must be a string
+
+If no argument is provided, raise TypeError
+
+
+::
+
+
+	>>> say_my_name()
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
