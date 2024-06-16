@@ -1,0 +1,79 @@
+==================
+4-print_square.txt
+==================
+
+The module defines a function that prints a square ```print_square(size)```
+
+Uses
+====
+
+If size>=0, print a square using #
+
+::
+
+
+	>>> print_square = __import__('4-print_square').print_square
+	>>> print_square(2)
+	##
+	##
+
+
+::
+
+
+	>>> print_square(5)
+	#####
+	#####
+	#####
+	#####
+	#####
+
+
+if size is zero, nothing is printed
+
+
+::
+
+
+	>>> print_square(0)
+
+
+if size is not an integer, raise TypeError
+
+
+::
+
+
+	>>> print_square('str')
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+
+::
+
+
+	>>> print_square(None)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+
+
+If size is less than 0, but a floating number return TypeError
+
+
+::
+
+
+	>>> print_square(-3.2)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+
+if size is less than 0, but an integer, return ValueError
+
+
+::
+
+	>>> print_square(-2)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
