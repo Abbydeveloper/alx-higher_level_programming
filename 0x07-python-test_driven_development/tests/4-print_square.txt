@@ -77,3 +77,13 @@ if size is less than 0, but an integer, return ValueError
 	>>> print_square(-2)
 	Traceback (most recent call last):
 	ValueError: size must be >= 0
+
+If not argument is provided, raise Type Error
+
+
+::
+
+
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'
