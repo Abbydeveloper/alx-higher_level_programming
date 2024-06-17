@@ -46,7 +46,7 @@ If the column count of m_a does not equal the row count of m_b, raise ValueError
 	... [7, 8],
 	... [9, 0]
 	... ]
-	>>> print(matrix_mul(m_a, m_b)
+	>>> print(matrix_mul(m_a, m_b))
 	Traceback (most recent call last):
 	TypeError: m_a and m_b can't be multiplied
 
@@ -56,7 +56,7 @@ Neither m_a or m_b must be empty
 ::
 	>>> m_a = []
 	>>> m_b = [[]]
-	>>> print(matrix_mul(m_a, m_b)
+	>>> print(matrix_mul(m_a, m_b))
 	Traceback (most recent call last):
 	TypeError: m_a can't be empty
 
@@ -64,6 +64,6 @@ Neither m_a or m_b must be empty
 
 	>>> m_a = [[1, 2]]
 	>>> m_b = [[]]
-	>>> print(matrix_mul(m_a, m_b)
+	>>> print(matrix_mul(m_a, m_b))
 	Traceback (most recent call last):
 	TypeError: m_b can't be empty
