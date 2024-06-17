@@ -48,7 +48,7 @@ If the column count of m_a does not equal the row count of m_b, raise ValueError
 	... ]
 	>>> print(matrix_mul(m_a, m_b))
 	Traceback (most recent call last):
-	TypeError: m_a and m_b can't be multiplied
+	ValueError: m_a and m_b can't be multiplied
 
 
 Neither m_a or m_b must be empty
