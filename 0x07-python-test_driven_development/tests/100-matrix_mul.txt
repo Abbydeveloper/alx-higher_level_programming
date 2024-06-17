@@ -19,7 +19,7 @@ Uses
 	... [3,4]
 	... ]
 	>>> m_b = m_a
-	>>> print(matrix(m_a, m_b))
+	>>> print(matrix_mul(m_a, m_b))
 	[[7, 10], [15, 22]]
 
 Raise TypeError is any of the arguments are missing
