@@ -19,7 +19,7 @@ def matrix_mul(m_a, m_b):
     if not isinstance(m_a, list):
         raise TypeError('m_a must be a list')
     if not isinstance(m_b, list):
-        raise TypeError('m_a must be a list')
+        raise TypeError('m_b must be a list')
 
     if not all(isinstance(row, list) for row in m_a):
         raise TypeError('m_a must be a list of lists')
@@ -44,9 +44,9 @@ def matrix_mul(m_a, m_b):
     new_matrix = []
     for row in m_a:
         new_row = []
-        for i in range(len(row)):
+        for i in range(len(m_b[0])):
             prod = 0
-            for j in range(len(m_b)):
+            for j in range(len(row)):
                 prod += row[j] * m_b[j][i]
             new_row.append(prod)
         new_matrix.append(new_row)
