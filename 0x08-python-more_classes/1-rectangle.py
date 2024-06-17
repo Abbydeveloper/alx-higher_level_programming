@@ -34,7 +34,7 @@ class Rectangle():
         """Get or set the height of the rectangle"""
         return self.__height
 
-    @width.setter
+    @height.setter
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError('height must be an integer')
