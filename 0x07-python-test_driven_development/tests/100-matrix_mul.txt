@@ -58,7 +58,7 @@ Neither m_a or m_b must be empty
 	>>> m_b = [[]]
 	>>> print(matrix_mul(m_a, m_b))
 	Traceback (most recent call last):
-	TypeError: m_a can't be empty
+	ValueError: m_a can't be empty
 
 ::
 
@@ -66,4 +66,4 @@ Neither m_a or m_b must be empty
 	>>> m_b = [[]]
 	>>> print(matrix_mul(m_a, m_b))
 	Traceback (most recent call last):
-	TypeError: m_b can't be empty
+	ValueError: m_b can't be empty
