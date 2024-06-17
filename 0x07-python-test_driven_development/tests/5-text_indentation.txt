@@ -48,20 +48,6 @@ Only add text indentation after the specified characters.
 	Go away
 
 
-Print new lines within a string 
-
-
-::
-
-	>>> text_indentation("Print new line. Okay \n Newline here.")
-	Print new line.
-	<BLANKLINE>
-	Okay
-	<BLANKLINE>
-	Newline here.
-	<BLANKLINE>
-
-
 Raise TypeError if the text argument is not a string
 
 ::
