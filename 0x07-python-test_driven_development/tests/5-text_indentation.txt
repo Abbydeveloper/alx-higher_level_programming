@@ -1,0 +1,86 @@
+=====================
+5-text_indentation.py
+=====================
+
+Module defines a text-indentation function that adds indentation after specific characters
+
+Uses
+====
+
+Print two new lines after the special characters '.', '?', ':'
+
+
+::
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+	>>> text_indentation('How are you?Fine')
+	How are you?
+	<BLANKLINE>
+	Fine
+
+
+Remove any spaces at the beginning of a new line
+
+
+::
+
+	>>> text_indentation('You?    Yes')
+	You?
+	<BLANKLINE>
+	Yes
+
+
+Remove any spaces at the end of a new line
+
+
+::
+
+
+	>>> text_indentation('Come along.   ')
+	Come along.
+	<BLANKLINE>
+
+
+Only add text indentation after the specified characters.
+	>>> text_indentation('Ola!!! Why are you here? Go away')
+	Ola!!! Why are you here?
+	<BLANKLINE>
+	Go away
+
+
+Print new lines within a string 
+
+
+::
+
+	>>> text_indentation("Print new line. Okay \n Newline here.")
+	Print new line.
+	<BLANKLINE>
+	Okay
+	<BLANKLINE>
+	Newline here.
+	<BLANKLINE>
+
+
+Raise TypeError if the text argument is not a string
+
+::
+
+
+	>>> text_indentation(22)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+::
+
+
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+::
+
+
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
