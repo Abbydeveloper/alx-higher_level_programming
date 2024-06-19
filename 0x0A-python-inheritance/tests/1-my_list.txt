@@ -24,6 +24,7 @@ Check that print_sorted method is documented
 	True
 
 Check that MyList inherits  from the List class
+	>>> MyList = __import__('1-my_list').MyList
 	>>> issubclass(my_list, list)
 	True
 
