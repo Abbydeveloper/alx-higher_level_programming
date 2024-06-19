@@ -24,7 +24,7 @@ Check that print_sorted method is documented
 	True
 
 Check that MyList inherits  from the List class
-	>>> issubclass(MyList, list)
+	>>> issubclass(my_list, list)
 	True
 
 Test print_sorted funciton with an empty list
