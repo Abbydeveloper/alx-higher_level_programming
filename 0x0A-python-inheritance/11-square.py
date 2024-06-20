@@ -30,4 +30,3 @@ class Square(Rectangle):
 
         string = f'[{Square.__name__}] {self.__size}/{self.__size}'
         return string
-
