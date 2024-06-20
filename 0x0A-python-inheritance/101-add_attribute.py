@@ -6,7 +6,7 @@
 def add_attribute(obj, attr, value):
     """Add a new to attribute to an object only if it's possible
     Raise a TypeError exception if not
-    
+
     Args:
     obj (object): object to add attribute to
     attr (str): name of the attribute to add
