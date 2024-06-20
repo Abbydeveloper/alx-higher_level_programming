@@ -11,7 +11,7 @@ Tests
 	
 
 Check that module is documented
-	>>> bg_doc = __import__('7-base_geometry').__doc__
+	>>> bg_doc = BaseGeometry.__doc__
 	>>> len(bg_doc) > 1
 	True
 
