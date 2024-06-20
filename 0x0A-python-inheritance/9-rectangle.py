@@ -22,14 +22,14 @@ class Rectangle(BaseGeometry):
         self.integer_validator('height', height)
         self.__height = height
 
-        def area(self):
-            """Calculate and return the area of the rectangle"""
+    def area(self):
+        """Calculate and return the area of the rectangle"""
 
-            return (self.__width * self.__height)
+        return (self.__width * self.__height)
 
-        def __str__(self):
-            """Return the print() and str() representation of a Rectangle
-            instance"""
+    def __str__(self):
+        """Return the print() and str() representation of a Rectangle
+        instance"""
 
-            string = f'[{Rectangle.__name__}] {self.__width}/{self.__height}'
-            return string
+        string = f'[{Rectangle.__name__}] {self.__width}/{self.__height}'
+        return string
