@@ -21,7 +21,7 @@ Check that class is documented
 	True
 
 Check that area function is documented
-	>>> bg_area_doc = BaseGeometry().area.__doc__
+	>>> bg_area_doc = BaseGeometry.area.__doc__
 	>>> len(bg_area_doc) > 1
 	True
 
