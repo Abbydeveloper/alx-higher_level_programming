@@ -28,7 +28,7 @@ Check that area function is documented
 	>>> bg = BaseGeometry()
 
 Check that the area function returns expected string
-	>>> bg.area()(
+	>>> bg.area()
 	Traceback (most recent call last):
 	Exception: area() is not implemented
 
