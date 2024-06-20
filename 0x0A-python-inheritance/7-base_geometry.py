@@ -11,6 +11,7 @@ class BaseGeometry():
         super().__init__()
 
     def area(self):
+        """Calculate area"""
         raise Exception('area() is not implemented')
 
     def integer_validator(self, name, value):
