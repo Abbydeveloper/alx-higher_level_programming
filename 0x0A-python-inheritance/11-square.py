@@ -28,6 +28,6 @@ class Square(Rectangle):
         """Return the print() and str() representation of a Rectangle
             instance"""
 
-        string = f'([{Square.__name__}] {self.__size}/{self.__size})'
+        string = f'[{Square.__name__}] {self.__size}/{self.__size}'
         return string
 
