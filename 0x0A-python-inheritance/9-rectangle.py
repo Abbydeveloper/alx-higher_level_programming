@@ -31,5 +31,5 @@ class Rectangle(BaseGeometry):
             """Return the print() and str() representation of a Rectangle
             instance"""
 
-            string = f'([{Rectangle.__name__}] {self.__width}/{self.__height})'
+            string = f'[{Rectangle.__name__}] {self.__width}/{self.__height}'
             return string
