@@ -15,5 +15,5 @@ def append_after(filename="", search_string="", new_string=""):
         for line in text:
             string += line
             if search_string in line:
-                string += new_sting
+                string += new_string
         fa.write(s)
