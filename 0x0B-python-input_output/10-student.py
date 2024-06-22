@@ -21,5 +21,5 @@ class Student():
             for x in attrs:
                 if x in self.__dict__:
                     str_dict.update({x: self.__dict__[x]})
-                return str_dict
+            return str_dict
         return self.__dict__
