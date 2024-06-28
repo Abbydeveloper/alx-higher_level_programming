@@ -110,8 +110,6 @@ class Rectangle(Base):
 
         if args is not None and len(args) != 0:
             if len(args) >= 1:
-                if not isinstance(args[0], int) and args[0] is not None:
-                    raise TypeError("id must be an integer")
                 self.id = args[0]
             if len(args) > 1:
                 self.width = args[1]
@@ -124,8 +122,6 @@ class Rectangle(Base):
         else:
             for (key, value) in kwargs.items():
                 if key == 'id':
-                    if not isinstance(value, int) and value is not None:
-                        raise TypeError('id must be an integer')
                     self.id = value
                 if key == 'width':
                     self.width = value
@@ -135,3 +131,15 @@ class Rectangle(Base):
                     self.x = value
                 if key == 'y':
                     self.y = value
+
+    def to_dictionary(self):
+        """Return the dictionary representation of a rectangle"""
+
+        rect = {
+                'id': id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y
+                }
+        return (rect)
