@@ -99,4 +99,4 @@ class Rectangle(Base):
         """Return teh strig representation of a Rectangle instance"""
 
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(
-                self.id, self.__x, self..__y, self.__width, self.__height))
+                self.id, self.__x, self.__y, self.__width, self.__height))
