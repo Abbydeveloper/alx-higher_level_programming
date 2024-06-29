@@ -136,7 +136,7 @@ class Rectangle(Base):
         """Return the dictionary representation of a rectangle"""
 
         rect = {
-                'id': id,
+                'id': self.id,
                 'width': self.width,
                 'height': self.height,
                 'x': self.x,
