@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import json
-"""Base Module"""
+"""Base Module
+Base classes for all other classes in this project
+"""
 
 
 class Base():
