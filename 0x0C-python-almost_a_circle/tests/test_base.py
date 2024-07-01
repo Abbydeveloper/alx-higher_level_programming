@@ -11,10 +11,21 @@ from models.square import Square
 class TestBase_instantiation(unittest.TestCase):
     """Test fo rinistantiation of the Base class"""
 
-    def test_no_arg(self):
-        b1 = Base()
-        b2 = Base()
-        self.assertEqual(b1.id, b2.id - 1)
+    def setUp(self):
+        Base._Base__nb_objects = 0
 
     def test_id(self):
-        self.assertEqual(12, Base(12).id
+        base_0 = Base()
+        self.assertEqual(base_0.id, 1)
+
+        base_1 = Base()
+        self.assertEqual(base_1.id, 2)
+
+        base_2 = Base(12)
+        self.assertEqual(base_2.id, 12)
+
+        base_3 = Base(0)
+        self.assertEqual(base_3, 0)
+
+        base_4 = Base(-5)
+        self.assertEqual(base_4, -5)
