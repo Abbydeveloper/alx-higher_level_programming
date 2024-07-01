@@ -25,7 +25,7 @@ class TestBase_instantiation(unittest.TestCase):
         self.assertEqual(base_2.id, 12)
 
         base_3 = Base(0)
-        self.assertEqual(base_3, 0)
+        self.assertEqual(base_3.id, 0)
 
         base_4 = Base(-5)
-        self.assertEqual(base_4, -5)
+        self.assertEqual(base_4.id, -5)

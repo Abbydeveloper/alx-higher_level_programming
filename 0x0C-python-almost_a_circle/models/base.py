@@ -5,7 +5,7 @@ Base classes for all other classes in this project
 """
 import json
 import csv
-import turtle
+"""|import turtle"""
 
 
 class Base():
@@ -108,10 +108,10 @@ class Base():
                 return ([cls.create(**d) for d in list_dicts])
         except IOError:
             return []
-
+    """
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Draw Rectangles and Squares using the turtle module"""
+        Draw Rectangles and Squares using the turtle module
 
         trtle = turtle.Turtle()
         trtle.screen.bgcolor('#b7312c')
@@ -145,3 +145,4 @@ class Base():
             trtle.hideturtle()
 
         turtle.exitonclick()
+    """
