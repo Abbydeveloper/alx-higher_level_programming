@@ -15,3 +15,6 @@ class TestBase_instantiation(unittest.TestCase):
         b1 = Base()
         b2 = Base()
         self.assertEqual(b1.id, b2.id - 1)
+
+    def test_id(self):
+        self.assertEqual(12, Base(12).id
