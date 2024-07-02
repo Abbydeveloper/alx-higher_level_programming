@@ -51,3 +51,18 @@ class TestBase(unittest.TestCase):
         self.assertEqual(json_d_1, '[]')
         json_d_2 = Base.to_json_string(None)
         self.assertEqual(json_d_1, '[]')
+
+
+        """Test with wrong types"""
+        with self.assertRaises(TypeError) as x:
+            Base.to_json_string(9)
+        self.assertEqual(
+             'list_dictionaries must be a list of dictionaries', str(x.exception))
+        with self.assertRaises(TypeError) as x:
+            Base.to_json_string('Hello')
+        self.assertEqual(
+             'list_dictionaries must be a list of dictionaries', str(x.exception))
+        with self.assertRaises(TypeError) as x:
+            Base.to_json_string(['Hola', 'Como estas'])
+        self.assertEqual(
+             'list_dictionaries must be a list of dictionaries', str(x.exception))
