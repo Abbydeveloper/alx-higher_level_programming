@@ -55,7 +55,11 @@ class TestBase(unittest.TestCase):
 
         """Test with wrong types"""
         with self.assertRaises(TypeError) as x:
-            Base.to_json_string(9)
+            Base.to_json_string()
+        self.assertEqual(
+             "to_json_string() missing 1 required positional argument: 'list_dictionaries'", str(x.exception))
+        with self.assertRaises(TypeError) as x:
+            Base.to_json_string(8)
         self.assertEqual(
              'list_dictionaries must be a list of dictionaries', str(x.exception))
         with self.assertRaises(TypeError) as x:
@@ -74,11 +78,11 @@ class TestBase(unittest.TestCase):
                     {'id': 89, 'width': 10, 'height': 4},
                     {'id': 10, 'width': 1, 'height': 8}
                 ]
-        json_list_input = Rectantle.to_json_string(list_1)
+        json_list_input = Rectangle.to_json_string(list_1)
         list_output = Rectangle.from_json_string(json_list_input)
         response = [{'width': 10, 'height': 4, 'id': 89},
                     {'width': 1, 'height': 8, 'id': 10}]
-        self.assertCountEqual(list_output, res)
+        self.assertCountEqual(list_output, response)
         self.assertEqual(type(list_output), list)
 
         list_output_1 = Rectangle.from_json_string('')
@@ -86,3 +90,8 @@ class TestBase(unittest.TestCase):
 
         list_output_2 = Rectangle.from_json_string(None)
         self.assertEqual(list_output_2, [])
+
+    def test_save_to_file_csv(self):
+        """Test save_to_file_csv method"""
+
+        
