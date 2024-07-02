@@ -4,8 +4,8 @@
 import io
 import sys
 import unittest
-import models.base import Base
-import models.base import Rectangle
+from models.base import Base
+from models.rectangle import Rectangle
 
 
 class Test_Rectangle(unittest.TestCase):
@@ -37,7 +37,7 @@ class Test_Rectangle(unittest.TestCase):
 
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Rectangle(1, 2, None)
-        with self.assertRaisesReges(ValueError, "x must be >= 0"):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             Rectangle(3, 2, -3, 0)
 
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
