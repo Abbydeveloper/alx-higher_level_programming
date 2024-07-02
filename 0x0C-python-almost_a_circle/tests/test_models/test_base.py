@@ -94,4 +94,33 @@ class TestBase(unittest.TestCase):
     def test_save_to_file_csv(self):
         """Test save_to_file_csv method"""
 
-        
+        rect0 = Rectangle(10, 7, 2, 8)
+        rect1 = Rectangle(2, 4)
+        Rectangle.save_to_file([rect0, rect1])
+        response = ('[{"y": 8, "x": 2, "id": 1, "width": 10, "height": 7},' +
+                    ' {"y": 0, "x": 0, "id": 12, "width": 2, "height": 4}]')
+        with open("Rectangle.json", mode="r") as f:
+            self.assertEqual(len(f.read()), len(response) - 1)
+        Rectangle.save_to_file(None)
+        response = "[]"
+        with open("Rectangle.json", mode="r") as f:
+            self.assertEqual(f.read(), response)
+        os.remove("Rectangle.json")
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", mode="r") as f:
+            self.assertEqual(f.read(), response)
+        square0 = Square(9, 3, 1, 12)
+        square1 = Square(6, 7)
+        Square.save_to_file([square0, square1])
+        response = ('[{"id": 12, "size": 9, "x": 3, "y": 1},' +
+                ' {"id": 3, "size": 6, "x": 7, "y": 0}]')
+        with open("Square.json", mode="r") as f:
+            self.assertEqual(len(f.read()), len(response))
+        Square.save_to_file(None)
+        response = "[]"
+        with open("Square.json", mode="r") as f:
+            self.assertEqual(f.read(), response)
+        os.remove("Square.json")
+        Square.save_to_file([])
+        with open("Square.json", mode="r") as f:
+            self.assertEqual(f.read(), response)
