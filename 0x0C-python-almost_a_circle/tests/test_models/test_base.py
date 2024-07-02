@@ -66,3 +66,23 @@ class TestBase(unittest.TestCase):
             Base.to_json_string(['Hola', 'Como estas'])
         self.assertEqual(
              'list_dictionaries must be a list of dictionaries', str(x.exception))
+
+    def test_from_json_strong(self):
+        """Test from_json_string method"""
+
+        list_1 = [
+                    {'id': 89, 'width': 10, 'height': 4},
+                    {'id': 10, 'width': 1, 'height': 8}
+                ]
+        json_list_input = Rectantle.to_json_string(list_1)
+        list_output = Rectangle.from_json_string(json_list_input)
+        response = [{'width': 10, 'height': 4, 'id': 89},
+                    {'width': 1, 'height': 8, 'id': 10}]
+        self.assertCountEqual(list_output, res)
+        self.assertEqual(type(list_output), list)
+
+        list_output_1 = Rectangle.from_json_string('')
+        self.assertEqual(list_output_1, [])
+
+        list_output_2 = Rectangle.from_json_string(None)
+        self.assertEqual(list_output_2, [])
