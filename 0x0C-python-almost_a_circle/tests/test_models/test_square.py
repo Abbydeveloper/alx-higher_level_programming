@@ -22,13 +22,13 @@ class Test_Square(unittest.TestCase):
 
         sq1 = Square(10)
         sq2 = Square(3)
-        self.assertEqual(sq1.id, sq2.id)
+        self.assertEqual(sq1.id, sq2.id - 1)
 
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square('Hi')
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Square(-3)
-        with self.assereRaisesRegex(ValueError, "width must be > 0"):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Square(0)
 
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
@@ -56,7 +56,7 @@ class Test_Square(unittest.TestCase):
         with contextlib.redirect_stdout(f):
             print(sq)
         string = f.getvalue()
-        response = "[Square] {5} 4/2 - 3\n"
+        response = "[Square] (5) 4/2 - 3\n"
         self.assertEqual(response, string)
 
         """Test display method"""
