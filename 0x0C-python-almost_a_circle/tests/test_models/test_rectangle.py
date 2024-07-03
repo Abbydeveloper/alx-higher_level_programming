@@ -69,6 +69,14 @@ class Test_Rectangle(unittest.TestCase):
         """Test display method (without x and y, and without y also)"""
 
         f = io.StringIO()
+        rect = Rectangle(2, 4, 3, 2, 0)
+        with contextlib.redirect_stdout(f):
+            rect.display()
+        string = f.getvalue()
+        response = "\n\n   ##\n   ##\n   ##\n   ##\n"
+        self.assertEqual(string, response)
+
+        f = io.StringIO()
         rect = Rectangle(5, 3)
         with contextlib.redirect_stdout(f):
             rect.display()
@@ -76,9 +84,10 @@ class Test_Rectangle(unittest.TestCase):
         response = "#####\n#####\n#####\n"
         self.assertEqual(string, response)
 
-        """with self.assertRaisesRegex(TypeError, 'display() takes 1 positional argument but 2 were given'):
+        with self.assertRaises(TypeError) as x:
             rect = Rectangle(9, 6)
-            rect.display(9)"""
+            rect.display(9)
+        self.assertEqual(str(x.exception), 'display() takes 1 positional argument but 2 were given')
 
         """Test to_dictionary method"""
 

@@ -124,3 +124,53 @@ class TestBase(unittest.TestCase):
         Square.save_to_file([])
         with open("Square.json", mode="r") as f:
             self.assertEqual(f.read(), response)
+
+    def test_create_rectangle(self):
+        rect = Rectangle(3, 5, 1, 2, 7)
+        rect_dict = rect.to_dictionary()
+        rect2 = Rectangle.create(**rect_dict)
+        self.assertEqual("[Rectangle] (7) 1/2 - 3/5", str(rect))
+        self.assertIsNot(rect, rect2)
+        self.assertNotEqual(rect, rect2)
+
+    def test_create_Square(self):
+        square = Square(3, 5, 1, 7)
+        square_dict = square.to_dictionary()
+        square2 = Square.create(**square_dict)
+        self.assertEqual("[Square] (7) 5/1 - 3", str(square))
+        self.assertIsNot(square, square2)
+        self.assertNotEqual(square, square2)
+
+    def test_load_from_file(self):
+        rect = Rectangle(10, 7, 2, 8)
+        rect2 = Rectangle(2, 4)
+        rect_list = [rect, rect2]
+        Rectangle.save_to_file(rect_list)
+        rect_list_output = Rectangle.load_from_file()
+        for x in zip(rect_list, rect_list_output):
+            self.assertEqual(str(x[0]), str(x[1]))
+
+        sq = Square(10, 2)
+        sq_2 = Square(9)
+        sq_list = [sq, sq_2]
+        Square.save_to_file(sq_list)
+        sq_list_output = Square.load_from_file()
+        for x in zip(sq_list, sq_list_output):
+            self.assertEqual(str(x[0]), str(x[1]))
+
+        """When file does not exist"""
+
+        if os.path.exists('Rectangle.json'):
+            os.remove('Rectangle.json')
+        if os.path.exists('Square.json'):
+            os.remove('Square.json')
+        if os.path.exists('Base.json'):
+            os.remove('Base.json')
+        rect_list = Rectangle.load_from_file()
+        self.assertEqual(rect_list, [])
+        square_list = Square.load_from_file()
+        self.assertEqual(square_list, [])
+
+        with self.assertRaises(TypeError) as x:
+            rect_list = Rectangle.load_from_file('Hello')
+        self.assertEqual(str(x.exception), 'load_from_file() takes 1 positional argument but 2 were given')
