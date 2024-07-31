@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """States Filter"""
+
 import MySQLdb
 import sys
 

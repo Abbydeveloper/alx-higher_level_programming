@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """States Filter by User Input"""
+
 import MySQLdb
 import sys
 
