@@ -14,7 +14,7 @@ if __name__ == "__main__":
                       states.id=cities.state_id
                       WHERE states.name=%s""", (match, ))
     rows = db_cursor.fetchall()
-    for row in rows:
-        print(*list(row), sep=", ")
+    tmp = list(row[0] for row in rows)
+    print(*tmp, sep=", ")
     db_cursor.close()
     db.close()
