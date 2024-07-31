@@ -10,7 +10,7 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3], port=3306)
     db_cursor = db.cursor()
     db_cursor.execute("""SELECT cities.id, cities.name, states.name FROM
-                      cities INNER JOIN states on states.id=cities.states_id""")
+                      cities INNER JOIN states on states.id=cities.state_id""")
     rows = db_cursor.fetchall()
     for row in rows:
         print(row)
