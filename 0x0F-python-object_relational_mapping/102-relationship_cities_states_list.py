@@ -18,5 +18,6 @@ if __name__ == "__main__":
     result = session.query(State).order_by(State.id)
     for instance in result:
         for city in instance.cities:
-            print("{:d}: {:s} -> {:s}".format(city.id, city.name, instance.name))
+            print("{:d}: {:s} -> {:s}"
+                  .format(city.id, city.name, instance.name))
     session.commit()
