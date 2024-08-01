@@ -19,5 +19,5 @@ if __name__ == "__main__":
     for state in result:
         print("{:d}: {:s}".format(state.id, state.name))
         for cities in state.cities:
-            print("\t{:d}: {:s{".format(cities.id, cities.name))
+            print("\t{:d}: {:s}".format(cities.id, cities.name))
     session.commit()
