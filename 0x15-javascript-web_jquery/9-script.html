@@ -1,0 +1,10 @@
+$(function() { 
+  $.ajax({
+    type: 'GET',
+    url: 'https://hellosalut.stefanbohacek.dev/?lang=fr',
+    success: function(result){
+      console.log(result)
+      $('DIV#hello').text(result.hello)
+    }
+  })
+})
