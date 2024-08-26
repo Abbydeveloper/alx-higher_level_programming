@@ -9,4 +9,4 @@ if __name__ == "__main__":
 
     url = sys.argv[1]
     with request.urlopen(url) as resp:
-        print(dict(resp.headers).get('X.Request-Id'))
+        print(dict(resp.headers).get('X-Request-Id'))
