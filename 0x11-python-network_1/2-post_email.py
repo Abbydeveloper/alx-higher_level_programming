@@ -4,7 +4,7 @@
 
 if __name__ == "__main__":
     import sys
-    from urllib import request
+    import urllib.request
     import urllib.parse
 
     url = sys.argv[1]
@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     data = urllib.parse.urlencode(val)
     data = data.encode('ascii')
-    req = request.Request(url, data)
-    with request.urlopen(url) as resp:
+    req = urllib.request.Request(url, data)
+    with urllib.request.urlopen(req) as resp:
         body = response.read()
         print(body.decode('utf-8'))
