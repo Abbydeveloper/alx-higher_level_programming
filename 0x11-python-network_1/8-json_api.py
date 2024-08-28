@@ -11,7 +11,7 @@ if __name__ == "__main__":
         arg = sys.argv[1]
     else:
         arg = ""
-    data = {'q': arg)
+    data = {'q': arg}
     url = "http://0.0.0.0:5000/search_user"
     req = requests.post(url, data)
     try:
