@@ -7,7 +7,7 @@ import sys
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    req = requests.gett(url)
+    req = requests.get(url)
     try:
         req.raise_for_status()
         print(req.text)
