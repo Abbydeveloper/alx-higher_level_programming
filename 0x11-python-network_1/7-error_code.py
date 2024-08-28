@@ -7,5 +7,9 @@ import sys
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    req = requests.post(url, data={'email': sys.argv[2]})
-    print(req.text)
+    req = requests.gett(url)
+    try:
+        req.raise_for_status()
+        print(req.text)
+    except Exception as e:
+        print("Error code: {}".format(req.status_code))
