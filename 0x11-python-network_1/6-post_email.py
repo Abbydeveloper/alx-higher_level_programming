@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Take in a URL and an email address, send a post request to the 
+"""Take in a URL and an email address, send a post request to the
 URL with the email as a parameter and display the body of the response"""
 
 
