@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Take a URL, send a request to the URL and display the obdy of the response"""
+"""Take a URL, send a request to the URL and display
+the obdy of the response"""
 
 import requests
 import sys
